@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  script(src='./javascripts/jquery.js')
+  h1= title
+  img(src="/images/demonne.png", alt="logo", style='width:390; height:285;')
+  img(src='/images/ap.png' alt='accounts payable' style='width:390px; height:285px;')
+  p Welcome to #{title}
+  form(action='/invoice' method='POST')
+    label(for='name') Name:
+    br
+    input#name(type='text' name='name')
+    br
+    label(for='amount') Amount:
+    br
+    input#color(type='text' name='amount')
+    br
+    label(for='description') Description:
+    br
+    input#color(type='text' name='description')
+    input(type='submit' formtarget='_blank')
+
+
